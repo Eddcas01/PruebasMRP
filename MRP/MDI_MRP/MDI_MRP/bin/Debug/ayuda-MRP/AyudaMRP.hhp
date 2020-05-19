@@ -1,0 +1,25 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudaMRP.chm
+Contents file=MRPHELP.hhc
+Default Window=AyudaMRP
+Display compile progress=No
+Language=0x580a Español (Latinoamérica)
+
+[WINDOWS]
+AyudaMRP="Ayuda para modulo MRP","MRPHELP.hhc",,"AyudaInicio.html","AyudaInicio.html","AyudaMantenimientoInv.html","Inventarios","AyudaPedidosEspeciales.html","Pedidos Especiales",0x23520,,0xc304e,,,,,,,,0
+
+
+[FILES]
+AyudaInicio.html
+AyudaMantenimientoEMP.html
+AyudaMantenimientoProcRec.html
+AyudaMantenimientoConf.html
+AyudaMantenimientoInv.html
+AyudaOrdenPendiente.html
+AyudaEstadisticas.html
+AyudaPedidosEspeciales.html
+AyudaUnidadesMedida.html
+
+[INFOTYPES]
+

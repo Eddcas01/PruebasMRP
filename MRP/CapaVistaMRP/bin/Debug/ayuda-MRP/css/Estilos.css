@@ -1,0 +1,77 @@
+
+
+  .cuerpo{
+
+background-attachment: fixed;
+background-repeat:no-repeat; 
+background: white;
+
+  }
+
+  #tablas{
+
+background: rgb(138, 128, 128);
+
+  }
+  #Formularios{
+
+    background: rgb(122, 186, 147);
+
+  }
+
+  #botones{
+    background: rgb(113, 194, 196);
+
+
+  }
+  .main{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    background-color: white;
+}
+.header{
+    width: 90%;
+    height: auto;
+    color: black;
+    display: flex;
+    flex-direction: row; 
+}
+.footer{
+    background-color: rgb(165, 132, 197);
+    font-size: larger;
+}
+h1 {
+   margin: 5%;
+    text-align: center;
+    padding-left: 18% ;
+    padding-right: 15%;
+}
+.logo{
+    margin-right: 10%;
+    width: 250px;
+    height: 125px;
+}
+#index{
+   text-align: center;
+   
+   
+}
+a{
+    color: black;
+    font-size: larger;
+    text-decoration: none;
+}
+.text{
+    height: auto;
+    width: 100%;
+    text-align: justify;
+    font-size: larger;
+}
+.img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+    
+}

@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\edgar\\source\\repos\\MRP\\PruebaLib\\PruebaLib.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\edgar\\source\\repos\\MRP\\CapaControladorMRP\\CapaControladorMRP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaControladorMRP\\CapaControladorMRP.csproj",
+        "projectName": "CapaControladorMRP",
+        "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaControladorMRP\\CapaControladorMRP.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\edgar\\source\\repos\\MRP\\CapaModeloMRP\\CapaModeloMRP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaModeloMRP\\CapaModeloMRP.csproj",
+        "projectName": "CapaModeloMRP",
+        "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaModeloMRP\\CapaModeloMRP.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\edgar\\source\\repos\\MRP\\CapaControladorMRP\\CapaControladorMRP.csproj": {
+                "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaControladorMRP\\CapaControladorMRP.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\edgar\\source\\repos\\MRP\\CapaVistaMRP\\CapaVistaMRP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaVistaMRP\\CapaVistaMRP.csproj",
+        "projectName": "CapaVistaMRP",
+        "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaVistaMRP\\CapaVistaMRP.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\edgar\\source\\repos\\MRP\\CapaModeloMRP\\CapaModeloMRP.csproj": {
+                "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaModeloMRP\\CapaModeloMRP.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\edgar\\source\\repos\\MRP\\PruebaLib\\PruebaLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\edgar\\source\\repos\\MRP\\PruebaLib\\PruebaLib.csproj",
+        "projectName": "PruebaLib",
+        "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\PruebaLib\\PruebaLib.csproj",
+        "packagesPath": "C:\\Users\\edgar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\edgar\\source\\repos\\MRP\\PruebaLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\edgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\edgar\\source\\repos\\MRP\\CapaVistaMRP\\CapaVistaMRP.csproj": {
+                "projectPath": "C:\\Users\\edgar\\source\\repos\\MRP\\CapaVistaMRP\\CapaVistaMRP.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.9.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

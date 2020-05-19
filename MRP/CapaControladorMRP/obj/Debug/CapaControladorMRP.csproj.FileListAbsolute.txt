@@ -1,0 +1,12 @@
+C:\Users\edgar\source\repos\MRP\CapaControladorMRP\bin\Debug\CapaControladorMRP.dll
+C:\Users\edgar\source\repos\MRP\CapaControladorMRP\bin\Debug\CapaControladorMRP.pdb
+C:\Users\edgar\source\repos\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.csproj.CoreCompileInputs.cache
+C:\Users\edgar\source\repos\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.dll
+C:\Users\edgar\source\repos\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.pdb
+C:\Users\edgar\source\repos\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.csprojAssemblyReference.cache
+C:\Users\edgar\Documents\GitHub\MRP-Edgar\MRP\CapaControladorMRP\bin\Debug\CapaControladorMRP.dll
+C:\Users\edgar\Documents\GitHub\MRP-Edgar\MRP\CapaControladorMRP\bin\Debug\CapaControladorMRP.pdb
+C:\Users\edgar\Documents\GitHub\MRP-Edgar\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.csprojAssemblyReference.cache
+C:\Users\edgar\Documents\GitHub\MRP-Edgar\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Documents\GitHub\MRP-Edgar\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.dll
+C:\Users\edgar\Documents\GitHub\MRP-Edgar\MRP\CapaControladorMRP\obj\Debug\CapaControladorMRP.pdb

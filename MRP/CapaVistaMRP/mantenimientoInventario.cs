@@ -369,5 +369,10 @@ namespace CapaVistaMRP
         {
             val.nada(e);
         }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "ayuda-MRP/AyudaMRP.chm", "AyudaMantenimientoInv.html");
+        }
     }
 }

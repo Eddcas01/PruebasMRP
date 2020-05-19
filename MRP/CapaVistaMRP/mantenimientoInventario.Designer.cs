@@ -50,12 +50,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_inventarios)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_cantidad)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgb_inventarios
@@ -289,11 +291,13 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.42921F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.5708F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -310,7 +314,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(912, 130);
+            this.label5.Size = new System.Drawing.Size(866, 130);
             this.label5.TabIndex = 8;
             this.label5.Text = "Mantenimiento de Inventario";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,11 +325,22 @@
             this.pictureBox1.BackgroundImage = global::CapaVistaMRP.Properties.Resources.factory;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(921, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(875, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(234, 124);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::CapaVistaMRP.Properties.Resources.information;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(1115, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // mantenimientoInventario
             // 
@@ -350,6 +365,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,5 +394,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Txt_idinv;
         private System.Windows.Forms.ComboBox cmb_unidadmedida;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

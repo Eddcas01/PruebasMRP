@@ -1,5 +1,32 @@
-CREATE DATABASE IF NOT EXISTS produccion;
-USE produccion;
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-05-2020 a las 07:50:06
+-- Versión del servidor: 10.4.8-MariaDB
+-- Versión de PHP: 7.3.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `produccion`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ayuda`
+--
 
 CREATE TABLE `ayuda` (
   `Id_ayuda` int(11) NOT NULL,
@@ -81,6 +108,18 @@ CREATE TABLE `costos_produccion` (
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `costos_produccion`
+--
+
+INSERT INTO `costos_produccion` (`id_costos`, `id_producto`, `suma_costo_mp`, `suma_costo_mo`, `cif_unidad`, `costo_unitario_producto`, `fecha`, `estado`) VALUES
+(1, 1, 19.5, NULL, NULL, 0, '2020-05-18', 0),
+(2, 6, 99.1666666666666, 18.75, 266.666666666667, 384.583333333334, '2020-05-18', 0),
+(3, 11, 43, NULL, NULL, 0, '2020-05-18', 0),
+(4, 13, 100, NULL, NULL, 0, '2020-05-18', 0),
+(5, 14, 2.5, NULL, 133.333333333333, 0, '2020-05-18', 0),
+(6, 20, 20, NULL, 133.333333333333, 0, '2020-05-18', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -106,28 +145,29 @@ CREATE TABLE `detalles_recetas` (
 
 INSERT INTO `detalles_recetas` (`id_detalle`, `id_proceso`, `id_producto`, `cantidad`, `rendimiento_restante`, `rendimiento_fijo`, `cantidad_rendimiento_f`, `costo_unitario`, `unidad_medida`, `estado`) VALUES
 (1, 1, 10, 10.5, 0, 0, 0, 0, 'gr', 0),
-(2, 1, 2, 1.5, 98.8125, 5, 40, 50, 'ml', 1),
+(2, 1, 2, 1.5, 100, 5, 40, 50, 'ml', 1),
 (3, 1, 8, 1.5, 0, 0, 0, 0, 'ml', 0),
 (4, 1, 8, 4.5, 0, 0, 0, 0, 'ml', 0),
 (5, 4, 8, 1, 0, 0, 0, 0, 'ml', 0),
 (6, 4, 8, 3.5, 0, 0, 0, 0, 'ml', 0),
 (7, 4, 2, 1.1, 0, 0, 0, 0, 'ml', 0),
-(8, 1, 4, 10, 53.775, 15, 200, 23.3333333333333, 'ml', 1),
+(8, 1, 4, 10, 60.75, 15, 200, 23.3333333333333, 'ml', 1),
 (9, 1, 5, 1, 165, 20, 100, 20, 'ml', 1),
-(10, 1, 9, 10.22, 39.984, 60, 200, 5.83333333333333, 'ml', 1),
+(10, 1, 9, 4, 240, 60, 200, 5.83333333333333, 'lb', 1),
 (12, 4, 4, 1, 0, 0, 0, 0, 'ml', 0),
 (13, 4, 8, 2, 69.2, 20, 200, 7.5, 'ml', 1),
-(14, 4, 4, 1, 430, 50, 100, 7, 'ml', 1),
-(15, 4, 2, 2, 125, 50, 200, 5, 'ml', 1),
-(16, 2, 3, 2.5, 197.5, 25, 100, 8, 'ml', 1),
-(17, 2, 4, 5, 53.6, 10, 100, 35, 'ml', 1),
-(18, 5, 2, 40, 12.4625, 2.5, 100, 100, 'ml', 1),
+(14, 4, 4, 1, 405, 50, 100, 7, 'ml', 1),
+(15, 4, 2, 2, 200, 50, 200, 5, 'ml', 1),
+(16, 2, 3, 2.5, 225, 25, 100, 8, 'gr', 1),
+(17, 2, 4, 5, 81, 10, 100, 35, 'ml', 1),
+(18, 5, 2, 40, 20, 2.5, 100, 100, 'ml', 1),
 (19, 6, 15, 6, 180, 20, 100, 1.25, 'ml', 0),
-(20, 6, 15, 15, 90, 10, 100, 2.5, 'ml', 1),
+(20, 6, 15, 15, 90, 10, 100, 2.5, 'kg', 1),
 (21, 7, 17, 2, 450, 50, 100, 0.4, 'ml', 1),
 (22, 7, 18, 1, 1800, 20, 10, 1.25, 'ml', 1),
 (23, 7, 19, 2, 3600, 40, 10, 0.75, 'ml', 1),
-(24, 8, 21, 42, 180, 20, 100, 5, 'oz', 1);
+(24, 8, 21, 42, 180, 20, 100, 5, 'oz', 1),
+(25, 9, 21, 25, 43.6875, 5, 100, 20, 'gal', 1);
 
 -- --------------------------------------------------------
 
@@ -179,36 +219,36 @@ CREATE TABLE `inventarios_produccion` (
 --
 
 INSERT INTO `inventarios_produccion` (`id_inventario`, `id_producto`, `cod_config`, `cantidad_total`, `unidad_medida`, `estado`) VALUES
-(1, 2, 6, 800, 'ml', 0),
-(2, 2, 4, 800, 'ml', 0),
-(3, 4, 2, 810, 'ml', 0),
-(4, 5, 2, 825, 'ml', 0),
+(1, 2, 6, 795.5, 'ml', 0),
+(2, 2, 4, 795.5, 'ml', 0),
+(3, 4, 2, 780, 'ml', 0),
+(4, 5, 2, 822, 'ml', 0),
 (5, 7, 5, 900, 'ml', 0),
 (6, 3, 4, 1205, 'ml', 0),
-(7, 9, 4, 133.28, 'ml', 0),
+(7, 9, 4, 900, 'ml', 0),
 (8, 10, 4, 800, 'gr', 1),
 (9, 8, 1, 692, 'ml', 0),
 (10, 7, 4, 900, 'ml', 0),
 (11, 7, 1, 400, 'ml', 0),
 (12, 7, 5, 800, 'ml', 0),
-(13, 9, 2, 133.28, 'ml', 0),
-(14, 2, 4, 800, 'ml', 0),
+(13, 9, 2, 900, 'ml', 0),
+(14, 2, 4, 795.5, 'ml', 0),
 (15, 8, 4, 692, 'ml', 1),
-(16, 4, 4, 810, 'ml', 0),
+(16, 4, 4, 780, 'ml', 0),
 (17, 9, 4, 900, 'ml', 0),
-(18, 5, 4, 825, 'ml', 1),
-(19, 9, 4, 800, 'gr', 1),
-(20, 2, 4, 800, 'ml', 0),
-(21, 4, 4, 810, 'ml', 0),
+(18, 5, 4, 822, 'ml', 1),
+(19, 9, 4, 900, 'gr', 1),
+(20, 2, 4, 795.5, 'ml', 0),
+(21, 4, 4, 780, 'ml', 0),
 (22, 3, 4, 900, 'gr', 1),
-(23, 2, 4, 800, 'ml', 1),
-(24, 4, 4, 810, 'ml', 1),
+(23, 2, 4, 795.5, 'ml', 1),
+(24, 4, 4, 780, 'ml', 1),
 (25, 12, 4, 900, 'kg', 1),
 (26, 15, 4, 900, 'kg', 1),
 (27, 17, 4, 820, '1-kg', 0),
 (28, 18, 4, 860, '1-kg', 0),
 (29, 19, 4, 820, '1-kg', 0),
-(30, 21, 4, 873.75, 'lb', 1);
+(30, 21, 4, 858, 'lb', 1);
 
 -- --------------------------------------------------------
 
@@ -257,6 +297,15 @@ CREATE TABLE `ordenes_pendientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `ordenes_pendientes`
+--
+
+INSERT INTO `ordenes_pendientes` (`cod_opp`, `cod_orden`, `fecha_limite`, `estado`) VALUES
+(1, 1, '2020-05-25', 0),
+(2, 2, '2020-05-25', 0),
+(3, 3, '2020-05-25', 0);
+
+--
 -- Disparadores `ordenes_pendientes`
 --
 DELIMITER $$
@@ -278,6 +327,15 @@ CREATE TABLE `produccion_detalles` (
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `produccion_detalles`
+--
+
+INSERT INTO `produccion_detalles` (`id_detalle`, `cod_orden`, `id_producto`, `cantidad_producto`, `estado`) VALUES
+(1, 1, 20, 6, 1),
+(2, 2, 14, 6, 1),
+(3, 3, 6, 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -291,6 +349,15 @@ CREATE TABLE `produccion_encabezados` (
   `tipo_produccion` varchar(50) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `produccion_encabezados`
+--
+
+INSERT INTO `produccion_encabezados` (`cod_orden`, `fecha_orden`, `fecha_limite`, `tipo_produccion`, `estado`) VALUES
+(1, '2020-05-18', '2020-05-25', 'Especial', 0),
+(2, '2020-05-18', '2020-05-25', 'Especial', 0),
+(3, '2020-05-18', '2020-05-25', 'Especial', 0);
 
 --
 -- Disparadores `produccion_encabezados`
@@ -327,7 +394,8 @@ INSERT INTO `produccion_procesos` (`id_proceso`, `id_producto`, `nombre`, `descr
 (5, 13, 'Frijol', 'Bolsa de 40 kg de frijol rojo ', 5, 1),
 (6, 14, 'Maiz porva', 'Cada bolsa debe tener 20 kg de semillas', 8, 1),
 (7, 16, 'Hamburguesa', '2 rodajas de pan\r\n1 kg carne\r\n2g lechuga', 3, 0),
-(8, 20, 'ejemplo', 'ejemplo', 5, 1);
+(8, 20, 'ejemplo', 'ejemplo', 5, 0),
+(9, 20, 'ejemplo', 'ejemplo', 12, 1);
 
 -- --------------------------------------------------------
 
@@ -389,6 +457,15 @@ CREATE TABLE `productos_proceso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `productos_proceso`
+--
+
+INSERT INTO `productos_proceso` (`id_prodproc`, `cod_orden`, `fecha_inicio`, `estado`) VALUES
+(1, 1, '2020-05-18', 0),
+(2, 2, '2020-05-18', 1),
+(3, 3, '2020-05-18', 1);
+
+--
 -- Disparadores `productos_proceso`
 --
 DELIMITER $$
@@ -408,6 +485,13 @@ CREATE TABLE `productos_terminados` (
   `costo_total` float NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `productos_terminados`
+--
+
+INSERT INTO `productos_terminados` (`id_producto_term`, `cod_orden`, `costo_total`, `estado`) VALUES
+(1, 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -461,6 +545,13 @@ CREATE TABLE `registro_horas_emp` (
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `registro_horas_emp`
+--
+
+INSERT INTO `registro_horas_emp` (`cod_registro`, `cod_orden`, `id_empleado`, `fecha`, `hora_entrada`, `hora_salida_aa`, `hora_entrada_da`, `hora_salida_da`, `estado`) VALUES
+(2, 3, 2, '2020-05-19', '01:20:00', '01:20:00', '01:20:00', '01:20:00', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -474,6 +565,13 @@ CREATE TABLE `solicitudes_detalles` (
   `cantidad` double NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `solicitudes_detalles`
+--
+
+INSERT INTO `solicitudes_detalles` (`id_detalle`, `cod_solicitud`, `id_producto`, `cantidad`, `estado`) VALUES
+(1, 1, 9, 5543.08, 0);
 
 --
 -- Disparadores `solicitudes_detalles`
@@ -497,6 +595,13 @@ CREATE TABLE `solicitudes_encabezados` (
   `prioridad` varchar(10) NOT NULL,
   `estado` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `solicitudes_encabezados`
+--
+
+INSERT INTO `solicitudes_encabezados` (`cod_solicitud`, `fecha_solicitud`, `prioridad`, `estado`) VALUES
+(1, '2020-05-18', 'Alta', 0);
 
 -- --------------------------------------------------------
 
@@ -559,7 +664,9 @@ INSERT INTO `unidades_medida` (`id_medida`, `unidad1`, `cantidad1`, `unidad2`, `
 (37, 'taza', 1, 'taza', 1, 1),
 (38, 'ton', 1, 'lb', 2204.62, 1),
 (39, 'lb', 1, 'ton', 0.00045359290943564, 1),
-(40, 'ton', 1, 'ton', 1, 1);
+(40, 'ton', 1, 'ton', 1, 1),
+(41, 'lb', 1, 'gr', 453.59, 1),
+(42, 'gr', 1, 'lb', 0.00220463414096431, 1);
 
 --
 -- Índices para tablas volcadas
@@ -727,13 +834,13 @@ ALTER TABLE `configuraciones_inventarios`
 -- AUTO_INCREMENT de la tabla `costos_produccion`
 --
 ALTER TABLE `costos_produccion`
-  MODIFY `id_costos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_costos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `detalles_recetas`
 --
 ALTER TABLE `detalles_recetas`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
@@ -763,25 +870,25 @@ ALTER TABLE `movimientos_inventario_encabezado`
 -- AUTO_INCREMENT de la tabla `ordenes_pendientes`
 --
 ALTER TABLE `ordenes_pendientes`
-  MODIFY `cod_opp` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_opp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `produccion_detalles`
 --
 ALTER TABLE `produccion_detalles`
-  MODIFY `id_detalle` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detalle` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `produccion_encabezados`
 --
 ALTER TABLE `produccion_encabezados`
-  MODIFY `cod_orden` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_orden` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `produccion_procesos`
 --
 ALTER TABLE `produccion_procesos`
-  MODIFY `id_proceso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_proceso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -793,13 +900,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `productos_proceso`
 --
 ALTER TABLE `productos_proceso`
-  MODIFY `id_prodproc` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_prodproc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `productos_terminados`
 --
 ALTER TABLE `productos_terminados`
-  MODIFY `id_producto_term` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto_term` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `puestos`
@@ -811,19 +918,19 @@ ALTER TABLE `puestos`
 -- AUTO_INCREMENT de la tabla `registro_horas_emp`
 --
 ALTER TABLE `registro_horas_emp`
-  MODIFY `cod_registro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_registro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitudes_detalles`
 --
 ALTER TABLE `solicitudes_detalles`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitudes_encabezados`
 --
 ALTER TABLE `solicitudes_encabezados`
-  MODIFY `cod_solicitud` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_solicitud` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `sueldos`
@@ -835,7 +942,7 @@ ALTER TABLE `sueldos`
 -- AUTO_INCREMENT de la tabla `unidades_medida`
 --
 ALTER TABLE `unidades_medida`
-  MODIFY `id_medida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_medida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- Restricciones para tablas volcadas
@@ -913,4 +1020,6 @@ ALTER TABLE `solicitudes_detalles`
   ADD CONSTRAINT `solicitudes_detalles_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
